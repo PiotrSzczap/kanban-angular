@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'kanban-angular';
+  userName: string = "admin";
+  logOut() {
+
+  }
 }
