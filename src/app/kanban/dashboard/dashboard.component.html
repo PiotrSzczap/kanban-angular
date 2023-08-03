@@ -1,15 +1,8 @@
 <div class="flex-container">
-  <div>
-    <ul>
-      <li *ngFor="let item of div1Array" draggable="true" (dragstart)="drag($event, item, div1Array)">{{item}}</li>
-    </ul>
-  </div>
-  <div (drop)="drop($event, div2Array)" (dragover)="dragover($event)">
-    <ul>
-      <li *ngFor="let item of div2Array" draggable="true" (dragstart)="drag($event, item, div1Array)">{{item}}</li>
-    </ul>
-  </div>
-  <div>3</div>
-  <div>4</div>
-  <div>5</div>
+    <app-status-block *ngFor="let issueStatus of issueStatuses" [issueStatus]="issueStatus"
+                      [statusName]="issueStatus.statusName"
+                      [issues]="issueStatus.issues" (drop)="drop($event, issueStatus)" (dragover)="dragover($event)"
+                      (dragEventEmitter)="drag($event)">
+
+    </app-status-block>
 </div>

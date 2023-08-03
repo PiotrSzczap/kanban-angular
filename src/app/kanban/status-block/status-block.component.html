@@ -1,0 +1,8 @@
+<div>
+    <p>{{statusName}}</p>
+    <ul>
+        <li *ngFor="let issue of issues">
+            <app-issue draggable="true" [issue]="issue" (drag)="drag($event, issue)"></app-issue>
+        </li>
+    </ul>
+</div>
