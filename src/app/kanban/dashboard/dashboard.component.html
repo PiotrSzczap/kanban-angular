@@ -1,8 +1,8 @@
 <div class="flex-container">
-    <app-status-block *ngFor="let issueStatus of issueStatuses" [issueStatus]="issueStatus"
-                      [statusName]="issueStatus.statusName"
-                      [issues]="issueStatus.issues" (drop)="drop($event, issueStatus)" (dragover)="dragover($event)"
-                      (dragEventEmitter)="drag($event)">
+  <app-status-block *ngFor="let issueStatus of issueStatuses" [issueStatus]="issueStatus"
+                    [statusName]="issueStatus.statusName"
+                    [issues]="issueStatus.issues" (drop)="drop(issueStatus)" (dragover)="dragover($event)"
+                    (dragEventEmitter)="drag($event)">
 
-    </app-status-block>
+  </app-status-block>
 </div>
