@@ -34,9 +34,6 @@ export class DashboardComponent {
             ]
         },
     ];
-    div1Array: number[] = [1, 2, 3, 4, 5, 6, 7];
-    div2Array: number[] = [0, 9, 8];
-
     draggedElement: string | null = null;
     draggedSource: IssueStatus | null = null;
 
@@ -46,7 +43,7 @@ export class DashboardComponent {
         console.log("drag");
     }
 
-    drop($event: DragEvent, issueStatus: IssueStatus) {
+    drop(issueStatus: IssueStatus) {
         if (this.draggedElement && this.draggedSource) {
             let index = this.draggedSource.issues.indexOf(this.draggedElement);
             this.draggedSource.issues.splice(index, 1);
