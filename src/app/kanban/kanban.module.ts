@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { IssueComponent } from './issue/issue.component';
 import { StatusBlockComponent } from './status-block/status-block.component';
+import { TileComponent } from './tile/tile.component';
 
 
 
@@ -10,7 +11,8 @@ import { StatusBlockComponent } from './status-block/status-block.component';
   declarations: [
     DashboardComponent,
     IssueComponent,
-    StatusBlockComponent
+    StatusBlockComponent,
+    TileComponent
   ],
   imports: [
     CommonModule
