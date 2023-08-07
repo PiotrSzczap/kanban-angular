@@ -1,1 +1,12 @@
-<p>configuration works!</p>
+<div>
+  <div class="row">
+    <button class="btn">Add new</button>
+  </div>
+  <div class="row">
+    <ul>
+      <app-status-list-item *ngFor="let item of array" [item]="item.name"></app-status-list-item>
+    </ul>
+
+  </div>
+</div>
+

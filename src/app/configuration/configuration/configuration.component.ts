@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-configuration',
@@ -6,5 +6,27 @@ import { Component } from '@angular/core';
   styleUrls: ['./configuration.component.scss']
 })
 export class ConfigurationComponent {
+  array: test[] = [
+    {
+      name: "a",
+      id: 1
+    },
+    {
+      name: "b",
+      id: 2
+    },
+    {
+      name: "c",
+      id: 3
+    },
+    {
+      name: "d",
+      id: 4
+    },
+  ];
+}
 
+interface test {
+  name: string,
+  id: number
 }
