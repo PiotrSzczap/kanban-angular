@@ -8,6 +8,8 @@ import {KanbanModule} from "./kanban/kanban.module";
 import {ConfigurationModule} from "./configuration/configuration.module";
 import {SharedModule} from "./shared/shared/shared.module";
 import {CoreModule} from "./core/core.module";
+import {FormsModule} from "@angular/forms";
+import {AuthenticationModule} from "./authentication/authentication.module";
 
 @NgModule({
   declarations: [
@@ -15,14 +17,17 @@ import {CoreModule} from "./core/core.module";
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
+    SharedModule,
+    CoreModule,
     CommonModule,
     KanbanModule,
     ConfigurationModule,
-    SharedModule, CoreModule
+    AuthenticationModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {
 }

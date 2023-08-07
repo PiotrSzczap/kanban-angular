@@ -1,10 +1,9 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { IssueComponent } from './issue/issue.component';
-import { StatusBlockComponent } from './status-block/status-block.component';
-import { TileComponent } from './tile/tile.component';
-
+import {NgModule} from '@angular/core';
+import {CommonModule, NgOptimizedImage} from '@angular/common';
+import {DashboardComponent} from './dashboard/dashboard.component';
+import {IssueComponent} from './issue/issue.component';
+import {StatusBlockComponent} from './status-block/status-block.component';
+import {TileComponent} from './tile/tile.component';
 
 
 @NgModule({
@@ -15,7 +14,9 @@ import { TileComponent } from './tile/tile.component';
     TileComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    NgOptimizedImage
   ]
 })
-export class KanbanModule { }
+export class KanbanModule {
+}

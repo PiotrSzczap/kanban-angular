@@ -1,0 +1,19 @@
+form {
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login-container {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  height: 80vh;
+}
+
+.login-container > form > strong {
+  text-align: center;
+  font-size: 30px;
+  margin: 5px;
+}
