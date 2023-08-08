@@ -4,7 +4,12 @@
   </div>
   <div class="row">
     <ul>
-      <app-status-list-item *ngFor="let item of array" [item]="item.name"></app-status-list-item>
+      <app-status-list-item *ngFor="let item of array"
+                            [item]="item"
+                            (dropEmit)="drop($event)"
+                            (dragEmit)="drag($event)">
+
+      </app-status-list-item>
     </ul>
 
   </div>

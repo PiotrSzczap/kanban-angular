@@ -24,9 +24,32 @@ export class ConfigurationComponent {
       id: 4
     },
   ];
+
+  draggedItem: test | null = null;
+
+  drop(item: test) {
+
+    if (this.draggedItem) {
+      if (this.draggedItem === item)
+        return;
+
+      this.array.splice(this.array.indexOf(this.draggedItem), 1);
+      const index = this.array.indexOf(item);
+      this.array = [
+        ...this.array.slice(0, index),
+        this.draggedItem,
+        ...this.array.slice(index)
+      ];
+    }
+  }
+
+  drag(item: test) {
+    this.draggedItem = item;
+    console.log(item.name);
+  }
 }
 
-interface test {
+export interface test {
   name: string,
   id: number
 }
